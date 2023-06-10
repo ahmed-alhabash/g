@@ -1,0 +1,1520 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'roboto';
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+.game .video video{
+    width: 100%;
+    height: 100%;
+}
+.game .overlay{
+    overflow-y: hidden;
+    background:#0000009c;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.game .title{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50% , -50%);
+    z-index: 3;
+   
+}
+.game .title .basicTitle{
+    font-family: 'Roboto';
+    color: gold;
+    font-size: 55px;
+    text-transform:capitalize;
+}
+.game .title .basicTitle span{
+ color: #eee;
+ font-family: revert;
+}
+.game .title .descrbition{
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #eee;
+}
+.game .pages-links{
+position: absolute;
+top: 0;
+left: 0;
+background-color: #11292d59;
+z-index: 3;
+height: 100%;
+box-shadow: 0px 0 5px gold;
+}
+.game .pages-links .logo{
+    width: 200px;
+    padding-bottom: 30px;
+}
+.game .pages-links .logo img{
+    width: 100%;
+    border-radius: 50%;
+    margin-left: -15px;
+    animation: swing 10s linear infinite;
+    transition: all 300ms ease-in-out;
+    /* border: 2px solid gold; */
+}
+@media (min-width: 1200px){
+    .containerAlt{
+        width: 100%;
+        max-width:1000px!important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 768px){
+    .containerAlt{
+        width: 100%;
+        max-width:740px!important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@keyframes swing {
+    50%{
+  
+        transform:rotate3d(1, 1, 1, 20deg);
+        scale: 1.1;
+    }
+}
+.game .pages-links li{
+    display: flex;
+    padding-bottom: 35px;
+    cursor: pointer;
+    position: relative;
+}
+.game .pages-links li::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    top: -3px;
+    left: -18px;
+    background-color: gold;
+    transition: all 300ms ease-in-out;
+    scale: 0;
+    transform-origin:top;
+}
+.game .pages-links li:hover::before{
+    scale: 1;
+ 
+} 
+.game .pages-links li a{
+    color:#FFFFFF;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-align: center;
+}
+.game .pages-links li:hover a,
+.game .pages-links li:hover i{
+    color: #FFD700;
+}
+
+.game .pages-links li i{
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-right: 20px;
+}
+/* beginner start */
+.beginner{
+    background: #2c2e31;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlayStart{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ left: 0;
+ top: 0;   
+ background-color: #000;
+}
+.overlayLoading .homeLoading{
+    color: white;
+
+
+    font-family: 'roboto';
+    font-size: 60px;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50% ,50%);
+} 
+.overlayStart button{
+    cursor: pointer;
+     padding: 10px 20px;
+     border: 2px solid red;
+     font-size: 20px;
+     font-weight: 500;
+     background-color: #000;
+     color: white;
+     font-family: 'roboto';
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+     transition: 300ms all ease-in-out;
+}
+.overlayStart button:hover{
+    background-color: red;
+
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+    display: block;
+    top: 50%;
+  }
+  .loader:before {
+      content: '';
+      width: 48px;
+      height: 5px;
+      background: #000;
+      opacity: 0.25;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      border-radius: 50%;
+      animation: shadow 0.5s linear infinite;
+    }
+    .loader:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: gold;
+      animation: bxSpin 0.5s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+    }
+  @keyframes bxSpin {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+      transform: translateY(18px) scale(1, .9) rotate(45deg);
+      border-bottom-right-radius: 40px;
+    }
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @keyframes shadow {
+    0%, 100% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1);
+    }
+  }
+
+.overlayStart .userName{
+    padding: 5px 20px;
+    background-color: #323437;
+    border: 0;
+    outline: none;
+    color: white;
+    font-family: 'roboto';
+    position: absolute;
+    left: 42%;
+    top: 36%;
+}
+.beginner .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+.beginner .box span{
+     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px 2px #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Roboto';
+    color: #eee;
+}
+.removeWidth{
+    width: 0%;
+    transition: 500ms ease-in-out all;
+}
+.beginner input{
+    padding: 5px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+}
+.beginner .word-show{
+    text-align: center;
+    font-size: 100px;
+    background: #646669;
+    border-radius: 7%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    justify-content: center;
+    line-height: 142px;
+    display: block;
+    color: rgb(255, 217, 0);
+}
+.beginner-page .box-setting .name span{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'roboto';
+    color: white;
+}
+/* beginner end */
+/* advancedpage start */
+.advacedArbic,
+.advancedPage{
+    background: linear-gradient(to right, rgb(228, 212, 237), rgb(178, 209, 254));
+    min-height: 100vh;
+    position: relative;
+    padding-top: 30px;
+}
+.advancedPage .SettingsBar{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #131313, #1A1A1A);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.advancedPage .SettingsBar li{
+color: #eee;
+cursor: pointer;
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-family: 'Roboto';
+font-size: 20px;
+position: relative;
+}
+.advancedPage .SettingsBar li .arbic{
+    margin-left: 10px;
+    font-size: 16px;
+    margin-bottom: 11px;
+    text-transform: capitalize;
+}
+.advancedPage .SettingsBar .language div i{
+    color: white!important;
+    font-size: 16px;
+    margin-left: 11px;
+}
+.advancedPage .SettingsBar li p:hover{
+    color: gold;
+}
+.advancedPage .SettingsBar li i{
+    color: gold;
+}
+.advancedPage .SettingsBar .language{
+    position: relative;
+}
+.advancedPage .SettingsBar .language .boxlanguage p{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 5px 0px;
+    width: 100%;
+    text-align: center;
+}
+.advancedPage .SettingsBar .language .boxlanguage {
+    position: absolute;
+    left: 17px;
+    top: 54px;
+    width: 104px;
+    height: 100px;
+    background: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 0;
+    display: none;
+    border-top: 1px solid gold;
+}
+.advancedPage .SettingsBar .language .boxlanguage p:hover{
+    background: rgb(255, 217, 0);
+    color: white!important;
+}
+.advancedPage .SettingsBar li p{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.advancedPage .SettingsBar li p a{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.advancedPage .SettingsBar .time-box .time{
+    position: absolute;
+    left: -53px;
+    width: 58px;
+    height: 52px;
+    top: 43px;
+    font-size: 34px;
+    background: black;
+    font-weight: 700;
+    font-family: 'Roboto';
+    color: gold;
+    display: none;
+    transition: 300ms ease-in-out all;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.advacedPageArbic .box-word,
+.advancedPage .box-word{
+    color: #646669;
+    font-family: 'Roboto';
+    width: 100%;
+    font-size: 30px;
+    margin-top: 100px;
+}
+.advancedPage .input{
+    position: absolute;
+    left: 142px;
+     top: 50%;
+}
+.advacedPageArbic .input #input-word,
+.advancedPage .input #input-word{
+    width: 5px;
+    padding: 17px;
+    outline: none;
+    border: 0;
+    opacity: 0;
+}
+/* watch page start  */
+.watch {
+    background: #2c2e31;
+    min-height: 100vh;
+}
+.watch .box{
+    padding-top: 50px;
+    text-align: center;
+}
+/* watch page end  */
+ /* add class to game   */
+.correct{
+    color: #eee;
+}
+.mistake{
+    color: red;
+    text-decoration: underline;
+}
+.advancedPage .box-word span{
+    position: relative;
+}
+.gold{
+    color: gold;
+}
+.advancedPage .box-word span.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 35px;
+   background-color:gold;
+   opacity: 0;
+   animation: opacity 1.5s linear infinite;
+   transition: 300ms all ease-in-out;
+}
+@keyframes opacity {
+    50%{
+        opacity: 1;
+    }
+}
+.hide{
+    display: none!important;
+    transition: all  300ms ease-in-out;
+}
+.show{
+    display: block!important;
+    transition: all  300ms ease-in-out;
+}
+.advancedPage .result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+}
+.advancedPage .boxResoult{
+    display: none;
+}
+.advancedPage .result .circle{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #151515;
+}
+.advancedPage .result p{
+    font-size: 50px;
+}
+ /* add class to game   */
+@keyframes opacity {
+
+    50%{
+        opacity: 1;
+    }
+    
+}
+/* aribc game start  */
+/* aribc game  end */
+/* advancedpage  end */
+/* instuctions page start  */
+.instuctions{
+    background-color: #2c2e31;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+/* accordion settings start */
+.accordion-item {
+    margin-bottom: 20px;
+}
+.accordion-button{
+    position: relative;
+    padding: 5px;
+    background: #898989;
+    border: none;  
+}
+.accordion-button h2{
+    font-size: 25px;
+    color: #eee;
+    font-family: 'Roboto';
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+    background: #898989;
+}
+.accordion-body{
+    background: white;
+    color: black;
+    font-family: 'Roboto';
+ 
+    font-size: 20px;
+}
+.accordion-item .accordion-button p{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 9px;
+    display: flex;
+    color: gold;
+    border-color: gold;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+.accordion-item .accordion-button .icons{
+    font-size: 25px;
+    position: absolute;
+    left: 94%;
+ 
+}
+.accordion-button:not(.collapsed) .icons i:last-child{
+    rotate: -90deg;
+    color: #eee!important;
+}
+.accordion-item .accordion-button .icons i:last-child{
+    color: gold;
+    transition: 300ms all ease-in-out;
+}
+.accordion-button::after{
+    display: none;
+}
+.accordion-button:not(.collapsed) p{
+    color: gold;
+    border-color: gold;
+}
+strong{
+    font-weight: 500;
+    font-size: 14px;
+}
+/* accordion settings  end*/
+/* instuctions page end  */
+/* toggle click */
+.toggle-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+    }
+    .toggle-checkbox:checked + .toggle-switch {
+    background-color: #4F4F4F;
+    }
+    .toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    left: 50px;
+    color: #0075ff;
+    }
+    .toggle-switch {
+    background-color: white;
+    width: 70px;
+    height: 27px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    }
+    .toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+    }
+
+.backgrounds{
+ background-color: #2c2e31;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+}
+.ariafiled .word-show{
+    display: flex;
+    text-align: center;
+    font-size: 70px;
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    justify-content: center;
+    line-height: 92px;
+    display: none;
+    margin-top: 25px;
+}
+/* beginner start  */
+.beginner-page{
+    background-color: #2c2e31;
+    min-height: 100vh;
+}
+.beginner-page .box-setting{
+    width: 60%;
+    height: 50px;
+    background: black; 
+    margin:  auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #323437;
+    border-radius: 5px;
+}
+.beginner-page .box-setting .time{
+    color: white;
+    font-family: 'roboto';
+    cursor: pointer;
+    margin-right: 10px;
+}
+.beginner-page .box-setting .time span{
+    padding: 5px;
+}
+.beginner-page .box-show span{
+    padding: 5px;
+    border-radius:4px ;
+    background-color: white;
+    color: black;
+}
+.beginner-page .box-setting i{
+    color: gold;
+    margin-right: 10px;
+}
+.beginner-page .language{
+    color: white;
+    font-family: 'roboto';
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.beginner-page .language span{
+    cursor: pointer;
+    margin-right: 10px;
+    display: block;
+}
+.beginner-page .box-show{
+    text-align: center;
+    padding-top: 100px;
+    color: #646669;
+    font-family: 'Roboto';
+    font-size: 60px;
+}
+.beginner-page .inputs{
+    padding: 6px;
+    width: 50%;
+    display: block;
+    margin: 19px auto;
+    background: #646669;
+    border: none;
+    outline: none;
+    color: white;
+    opacity: 0;
+}
+.beginner-page .box-setting .time  span:first-child{
+    opacity: 0;
+}
+/* beginner end  */
+
+.ariafiled{
+margin: auto;
+padding-top: 55px;
+}
+.ariafiled #input{
+    width: 40%;
+    padding: 15px;
+    position: absolute;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    caret-color: black;
+    display: none;
+    transition: all 3s ease;
+    opacity: 0;
+}
+#starts{
+    position: absolute;
+    font-size: 38px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 91px;
+    color: white;
+    border-radius: 5px;
+    font-size: 31px;
+    cursor: pointer;
+    border: 2px solid white;
+    height: 59px;
+    text-align: center;
+}
+.reloud{
+    color: gold;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 50%;
+}
+.reloud i{
+    transition: all 1s ease;
+}
+.reloud:hover i{
+    transform: rotate(180deg);
+}
+.array-word{
+    display: flex;
+    position: absolute;
+    gap: 6px;
+    left: 0;
+    top: 65%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* arbic mood start  */
+.box-word-arbic{
+    color: #646669;
+    position: absolute;
+    left: 205px;
+    font-family: 'Roboto';
+    top: 198px;
+    width: 80%;
+    display: none;
+    font-size: 30px;
+}
+.box-word-arbic p{
+    display: block;
+}
+.input-arbic{
+    position: absolute;
+    left: 142px;
+    top: 50%;
+}
+.input-arbic input{
+    width: 800px;
+    padding: 17px;
+    outline: none;
+    border: 0;
+    opacity: 0;
+}
+.SettingsBar_arbic{
+    width: 60%;
+    height: 50px;
+    background: black;
+    position: absolute;
+    top: 3%;
+    left: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #323437;
+   
+    border-radius: 5px;
+}
+.SettingsBar_arbic .language{
+    color: white;
+    font-family: 'roboto';
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.SettingsBar_arbic .language p{
+    margin-top: 15px;
+}
+ .SettingsBar_arbic li p:hover{
+    color: gold;
+}
+.advancedPage .SettingsBar_arbic li i{
+    color: gold;
+}
+.SettingsBar_arbic .correct-letters {
+display: flex;
+align-items: center;
+color: white;
+gap: 10px;
+}
+.SettingsBar_arbic .correct-letters p{
+    margin-top: 16px;
+}
+.SettingsArbic{
+
+}
+.SettingsArbic .time-box {
+display: flex;
+gap: 5px;
+align-items: center;
+color: white;
+}
+.SettingsArbic .correct-word,
+.SettingsArbic .mistakes{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+}
+.SettingsArbic .correct-word p,
+.SettingsArbic .mistakes p{
+    margin-top: 16px;
+}
+.SettingsArbic .time-box p{
+    margin-top: 16px;
+    cursor: pointer;
+}
+.advacedArbic .SettingsArbic .time-box .time{
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: -65px;
+    top: 105px;
+    font-size: 34px;
+    font-weight: 700;
+    font-family: 'Roboto';
+    color: gold;
+}
+/* arbic mood end  */
+ .show{
+display: block;
+}
+.hide{
+display: none;
+}
+
+
+
+
+
+.DARK{
+    background: #2c2e31!important;
+    transition: 300ms all ease-in-out;
+}
+.DarkBar{
+    background: #323437!important;
+}
+.MoodColor{
+    color: black!important;
+}
+/* mood toggle start */
+.mood{
+    display: flex;
+    border-left: 1px solid gold;
+    padding-left: 13px;
+    margin-left: 0;
+    position: relative;
+}
+.mood .autoMood i,
+.mood .darkMood i,
+.mood .lightMood i{
+color: white!important;
+padding: 8px;
+
+}
+.mood .lightMood {
+position: relative;
+}
+.mood .moodBoxSetting div{
+    width: 100%;
+    height: 33%;
+}
+.mood .moodBoxSetting div:hover{
+    background-color: gold
+}
+.mood .moodBoxSetting{
+    position: absolute;
+    display: flex;
+    border-top: 1px solid gold;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 45px;
+    width: 95px;
+    height: 120px;
+    background-color: #131313;
+    color: white;
+    transition: 300ms all ease-in-out;
+} 
+.mood .boxIcons{
+    display: none;
+}
+.mood .moodBoxSetting p{
+    font-size: 12px;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+.mood  .arrowBox i{
+    font-size: 16px;
+}
+.mood .lightMood i {
+    font-size: 16px;
+    margin-right: 2px;
+}
+.barBlack{
+    background-color: #323437!important;
+}
+/* mood toggle end  */
+.show{
+    display: block!important;
+}
+/* arbic setting start  */
+.advacedArbic{
+    background: linear-gradient(to left, rgb(228, 212, 237), rgb(178, 209, 254),#FFF5D3);
+    min-height: 100vh;
+    position: relative;
+}
+.advacedArbic .SettingsArbic{
+    width: 100%;
+    /* height: 50px; */
+    /* position: absolute; */
+    /* top: 5%; */
+    /* left: 19%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #131313, #1A1A1A);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .boxIcons{
+    position: absolute;
+    left: 0;
+    top: 63px;
+    width: 100px;
+    border-top: 1px solid gold;
+    /* padding: 14px; */
+    height: 118px;
+    background: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 0;
+    color: white;
+    display: none;
+}
+.advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons .moodBoxSetting div:hover{
+    background-color: gold;
+
+}
+.advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons .moodBoxSetting div:hover i{
+    color: white;
+}
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .autoMood,
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .lightMood,
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .darkMood {
+display: flex;
+cursor: pointer;
+gap: 10px;
+} 
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .autoMood  i,
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .lightMood i,
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .moodBoxSetting .darkMood i{
+    margin-top: -10px;
+      
+}
+.advacedArbic .SettingsArbic  .toggle-mood-arbic .mood-arbic .arrowBox {
+color: white;
+cursor: pointer;
+font-size: 16px;
+}
+.advacedArbic .SettingsArbic .languageChange{
+color: white;
+gap: 10px;
+}
+.advacedArbic .SettingsArbic .languageChange .boxlanguage  {
+    position: absolute;
+    left: 143px;
+    top: 64px;
+    border-top: 1px solid gold;
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 0;
+    text-align: center;
+    display: none;
+}
+.advacedArbic .SettingsArbic .languageChange .boxlanguage p{
+    cursor: pointer;
+}
+.advacedArbic .SettingsArbic .languageChange .boxlanguage p a{
+    text-decoration: none;
+    color: white;
+}
+.advacedArbic .SettingsArbic .languageChange .boxlanguage p:hover{
+    background-color: gold;
+    color: black;
+}
+.advacedArbic .SettingsArbic .time-box-arbic,
+.advacedArbic .SettingsArbic  .correct-letters-arbic,
+.advacedArbic .SettingsArbic .mistakes-arbic,
+.advacedArbic .SettingsArbic .correct-word-arbic{
+    color: white;
+    font-size: 20px;
+    gap: 15px;
+}
+.advacedArbic .SettingsArbic .time-box-arbic p,
+.advacedArbic .SettingsArbic  .correct-letters-arbic p,
+.advacedArbic .SettingsArbic .mistakes-arbic p ,
+.advacedArbic .SettingsArbic .correct-word-arbic p{
+    color: white;
+    margin-top: 18px;
+}
+.advacedArbic .SettingsArbic .time-box-arbic {
+    margin-right: 20px;
+}
+.advacedArbic .SettingsArbic .time-box-arbic p{
+    cursor: pointer;
+}
+.advacedArbic .SettingsArbic .time-box-arbic p:hover{
+    color: gold;
+}
+/* screen show arbic start */
+.advacedArbic .box-word{
+    color: #646669;
+    color: #131313;
+    font-family: 'Roboto';
+    width: 100%;
+    margin-top: 100px;
+    font-size: 30px;
+}
+.advacedArbic .SettingsArbic li i{
+    color: gold;
+}
+.advacedArbic .SettingsArbic .time-box-arbic .time{
+    padding: 8px;
+    position: absolute;
+    right: 0px;
+    top: 46px;
+    border-top:1px solid gold ;
+    font-size: 27px;
+    font-weight: 700;
+    background: #151515;
+    font-family: 'Roboto';
+    color: gold;
+    transition: 300ms ease-in-out all;
+    transform-origin:top ;
+    width: 62px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity:  0;
+}
+.advacedArbic .input{
+    position: absolute;
+    left: 142px;
+    top: 50%;
+}
+.advacedArbic .input  #input-word-arbic{
+    width: 115px;
+    padding: 17px;
+    outline: none;
+    border: 0;
+    opacity: 0;
+}
+.advacedArbic .result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.advacedArbic .boxResoult{
+    display: none;
+}
+.advacedArbic .circle{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: #151515;
+    font-weight: bold;
+}
+.advacedArbic .circle p{
+    font-size: 50px;
+}
+
+
+
+
+
+
+@media( max-width: 768px){
+    .game .pages-links{
+        position: static;
+        background: black;
+        height: 100vh;
+    }
+    .game .pages-links li{
+        justify-content: space-between;
+    }
+    .game .pages-links li a,
+    .game .pages-links li i{
+        width: 50%;
+    }
+    .game .pages-links .logo img{
+        margin-left: 0;
+    }
+    .game .pages-links .logo {
+        width: 210px;
+        padding-bottom: 22px;
+        margin: 0 auto;
+        padding-top: 23px;
+    }
+    .advancedPage .input {
+        left: 0;
+        top: 50%;
+        width: 100%;
+    }
+    .overlayStart .alart{
+        font-size: 16px;
+    }
+    .advancedPage .box-word span.active::before{
+        height: 20px;
+    }
+
+    .advancedPage .input #input-word{
+      width: 100%;
+    }
+    .game .title,
+    .game .overlay,
+    .game .video video{
+        display: none;
+    }
+    .advancedPage .SettingsBar .time-box .time{
+        left: -22px;
+        top: 85px;
+        font-size: 20px;
+        width: 50px;
+        height: 45px;
+        line-height: 2;
+    }
+    .advancedPage .SettingsBar .language .boxlanguage{
+        left: 6px;
+        top: 46px;
+        width: 100px;
+        height: 80px;
+        z-index: 1;
+    }
+    .advancedPage .SettingsBar .language div i{
+    font-size: 14px;
+    margin-top: 9px;
+    }
+    .advancedPage .SettingsBar li .arbic{
+        font-size: 14px;
+    }
+      /* beginner-page start  */
+    .beginner-page .box-setting{
+        width: 100%;
+    }
+    .accordion-button h2{
+        font-size: 10px;
+    }
+    .accordion-item .accordion-button .icons{
+        font-size: 18px;
+        left: 90%;
+    }
+    .advancedPage .box-word{
+        font-size: 15px;
+    }
+    .SettingsBar_arbic{
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: -14px;
+    }
+    .box-word-arbic {
+        left: 25px;
+        top: 90px;
+        width: 90%;
+        font-size: 15px;
+    }
+    .advacedArbic .SettingsArbic .time-box-arbic .time{
+    position: absolute;
+    right: 2px;
+    top: 64px;
+    font-size: 23px;
+    background: #171717;
+    }
+    .advacedArbic .SettingsArbic .time-box-arbic{
+        margin: auto;
+    }
+    .advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons{
+        font-size: 16px;
+        gap: 5px;
+    }
+    .advacedArbic .SettingsArbic .languageChange .boxlanguage{
+        left: 84px;
+        top: 66px;
+        width: 79px;
+        border-top: 1px solid gold;
+    }
+
+.advancedPage{
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.advacedArbic .result{
+    flex-direction: column;
+}
+.advacedArbic .circle{
+    width: 130px!important;
+    height: 130px!important;
+}
+.advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons{
+    border-top: 1px solid gold;
+    left: 0px;
+    top: 66px;
+    z-index: 1;
+    width: 82px;
+}
+.advacedArbic .SettingsArbic{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    flex-wrap: wrap;
+}
+.advacedArbic .box-word{
+    color: #646669;
+    color: #131313;
+    margin-top: 80px;
+    font-size: 22px!important;
+    text-align: right;
+}
+/* english advanced start  */
+
+.advancedPage .SettingsBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    
+}
+.mood .moodBoxSetting{
+    left: 10px;
+    top: 39px;
+    z-index: 1
+}
+.game .pages-links{
+    box-shadow:none
+}
+.advancedPage .box-word{
+    margin-top: 140px;
+}
+.advancedPage .SettingsBar li{
+    font-size: 16px;
+}
+.mood{
+    border-left: none;
+    align-items: center;
+}
+.advancedPage .result {
+    display: flex;
+    flex-direction: column;
+}
+.advancedPage .result{
+    gap: 5px;
+}
+.advancedPage .result .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 15px;
+}
+.advancedPage .result p {
+    font-size: 30px;
+}
+/* english advanced end  */
+    /* beginner-page end  */
+}
+@media(min-width:769px) and (max-width:991px) {
+    .containerAlt{
+        width: 100%;
+        max-width:780px!important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .game .video video{
+        width: 1200px;
+    }  
+    .game .title{
+        left: 60%;
+    }
+    .game .title .basicTitle{
+        font-size: 40px;
+    }
+    .game .title .descrbition{
+        font-size: 17px;
+    }
+    .game .pages-links .logo{
+        width: 152px;
+        padding-bottom: 31px;
+        margin: 10px auto;
+ 
+    }
+    .game .pages-links li a{
+        font-size: 16px;
+        margin-right: 14px;
+    }
+
+    .advancedPage .SettingsBar .time-box .time{
+        left: -167px;
+        top: 112px;
+        font-size: 30px;
+    }
+    /* arbicSettingAdvanced start */
+    .advacedArbic .SettingsArbic{
+        position: relative;
+    }
+    .advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons{
+        left: 0%;
+        top: 63px;
+        border-top: 1px solid gold;
+    }
+    .advacedArbic .SettingsArbic .languageChange .boxlanguage{
+        left: 101px;
+        top: 63px;
+        border-top: 1px solid gold;
+    }
+    .advacedArbic .SettingsArbic .time-box-arbic .time{
+        right: 0;
+        top: 45px;
+    }
+    /* arbicSettingAdvanced end */
+    /* EnglishSettingAdvanced start */
+    .mood .moodBoxSetting{
+        left: -15px;
+        top: 46px;
+        
+    }
+    .advancedPage .box-word{
+        font-size: 25px;
+    }
+    /* EnglishSettingAdvanced end */
+ }
+@media(min-width:991px) and (max-width:1199px) {
+    .containerAlt{
+        width: 100%;
+        max-width:980px!important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .game .video video{
+        width: 1200px;
+    }  
+    .game .title{
+        left: 60%;
+    }
+    .advancedPage .box-word{
+        left: 72px;
+        top: 203px;
+        width: 90%;
+    }
+    .advacedArbic .SettingsArbic{
+        position: relative;
+    }
+    .advacedArbic .SettingsArbic .toggle-mood-arbic .mood-arbic .boxIcons{
+        left: 0%;
+        top: 63px;
+        border-top: 1px solid gold;
+    }
+    .advacedArbic .SettingsArbic .languageChange .boxlanguage{
+        left: 154px;
+        top: 63px;
+        border-top: 1px solid gold;
+    }
+    .advacedArbic .SettingsArbic .time-box-arbic .time{
+        right: 0;
+        top: 45px;
+    }
+}
+@media(min-width:1200px){
+
+}
+/* screen show arbic end  */
+/* arbic setting end  */
+.overlayGame{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.overlayGame .loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+  }
+ .overlayGame .loader:before {
+      content: '';
+      width: 48px;
+      height: 5px;
+      background: #000;
+      opacity: 0.25;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      border-radius: 50%;
+      animation: shadow 0.5s linear infinite;
+    }
+  .overlayGame  .loader:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      animation: bxSpin 0.5s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+    }
+  @keyframes bxSpin {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+      transform: translateY(18px) scale(1, .9) rotate(45deg);
+      border-bottom-right-radius: 40px;
+    }
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @keyframes shadow {
+    0%, 100% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1);
+    }
+  }

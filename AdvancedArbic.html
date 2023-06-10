@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="icon" href="assets/image/logo.png">
+    <title >مستوي متقدم</title>
+</head>
+<body>
+    <div class="advacedArbic">
+        <div class="containerAlt">
+            <ul class="SettingsArbic d-flex align-items-center justify-content-between position-relative">
+                <li class="toggle-mood-arbic">
+                   <div class="mood-arbic">
+                       <div class="lightMood"><i class="fa-solid fa-sun suns" style="color: white;"></i></div>
+                       <div class="arrowBox"><i class="fa-solid fa-angle-down "></i></div>
+                         <div class="boxIcons">
+                           <div class="moodBoxSetting justify-content-center">
+                               <div class="lightMood d-flex align-items-center  justify-content-center"><i class="fa-solid fa-sun"></i><p> النهار  </p></div>
+                               <div class="darkMood d-flex align-items-center justify-content-center"  ><i class="fa-solid fa-moon"></i><p>الليل  </p></div>
+                               <div class="autoMood d-flex align-items-center justify-content-center" ><i class="fa-solid fa-circle-half-stroke"></i><p>تلقائي</p></div>
+                           </div>
+                         </div>
+                   </div>
+               </li>
+                <li class="languageChange d-flex align-items-center">
+                   <i class="fa-sharp fa-solid fa-globe"></i>
+                   <p class="arbic" style="margin-top: 18px;">اللغة</p>
+                   <div><i class="fa-solid fa-angle-down arrowDown arrowLanguage" style="cursor: pointer;"></i></div>
+                   <!-- <p class="english">English</p> -->
+                   <div class="boxlanguage  ">
+                       <p class="p-2"><a href="AdvancedArbic.html">العربية</a></p>
+                       <p class="p-2"><a href="Advanced.html">English</a></p>
+                   </div>
+                </li>     
+               <li class="correct-word-arbic d-flex align-items-center"><i class="fa-brands fa-wpressr"></i><p>0</p></li>
+               <li class="mistakes-arbic d-flex align-items-center"><i class="fa-solid fa-circle-exclamation"></i><p>0</p></li>
+               <li class="correct-letters-arbic d-flex align-items-center" ><i class="fa-solid fa-circle-check"></i><p>0</p></li>
+               <li class="time-box-arbic d-flex align-items-center"><i class="fa-regular fa-clock"></i> <p>15</p> <p>30</p> <p>90</p> <p class="time containerAlt">60</p> <p>120</p></li>
+       </ul>
+        </div>
+        <div class="box-word containerAlt">
+        </div>
+        <div class="input">
+            <input type="text" id="input-word-arbic">
+        </div>
+         <div class="boxResoult">
+            <div class="result d-flex gap-4  ">
+                <div class="circle ">
+                    <p class="timeResoult">0</p>
+                 <span> الوقت المستخدم </span>
+             </div>
+                <div class="circle ">
+                    <p class="wordRight">0</p>
+                 <span>الكلمات الصحيحة</span>
+             </div>
+                <div class="circle ">
+                    <p class="letterRight">0</p>
+                 <span>الحروف الصحيحة </span>
+             </div>
+                <div class="circle ">
+                    <p class="letterWrong">0</p>
+                 <span>الحروف الخاطئة</span>
+             </div>
+        
+            </div>
+         </div>
+        
+<div class="overlayGame">
+    <span class="loader"></span>
+   </div>
+    </div>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/advancedArbic.js"></script>
+</body>
+</html>

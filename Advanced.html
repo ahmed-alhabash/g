@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="icon" href="assets/image/logo.png">
+    <title>advanced</title>
+</head>
+<body>
+
+<div class="advancedPage">
+    <div class="containerAlt">
+        <ul class="SettingsBar position-relative">
+                 <li class="time-box"><i class="fa-regular fa-clock"></i> <p>15</p> <p>30</p> <p>90</p> <p class="time">60</p> <p>120</p></li>
+                 <li class="correct-word"><i class="fa-brands fa-wpressr"></i><p>0</p></li>
+                 <li class="mistakes"><i class="fa-solid fa-circle-exclamation"></i><p>0</p></li>
+                 <li class="correct-letters"><i class="fa-solid fa-circle-check"></i><p>50</p></li>
+                 <li class="language">
+                    <i class="fa-sharp fa-solid fa-globe"></i>
+                    <p class="arbic">language</p>
+                    <div><i class="fa-solid fa-angle-down arrowDown "></i></div>
+                    <!-- <p class="english">English</p> -->
+                    <div class="boxlanguage ">
+                        <p><a href="AdvancedArbic.html">العربية</a></p>
+                        <p><a href="Advanced.html">English</a></p>
+                    </div>
+                 </li>     
+                 <li class="toggle-mood">
+                    <div class="mood">
+                        <div class="lightMood"><i class="fa-solid fa-sun suns"></i></div>
+                        <div class="arrowBox"><i class="fa-solid fa-angle-down toggleMood"></i></div>
+                          <div class="boxIcons">
+                            <div class="moodBoxSetting">
+                                <div class="lightMood d-flex align-items-center"><i class="fa-solid fa-sun"></i><p>light </p></div>
+                                <div class="darkMood d-flex align-items-center" ><i class="fa-solid fa-moon"></i><p>dark </p></div>
+                                <div class="autoMood d-flex align-items-center" ><i class="fa-solid fa-circle-half-stroke"></i><p>auto</p></div>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+        </ul>
+
+        <div class="box-word"></div>
+        <div class="input">
+            <input type="text" id="input-word">
+        </div>
+        <div class="boxResoult">
+            <div class="result ">
+                <div class="circle ">
+                    <p class="letterWrong">1</p>
+                 <span >wrong letters</span>
+             </div>
+                <div class="circle ">
+                    <p class="letterRight">1</p>
+                 <span>correct letters</span>
+             </div>
+                <div class="circle ">
+                    <p class="wordRight">1</p>
+                 <span>correct words</span>
+             </div>
+             <div class="circle ">
+                <p class="timeResoult"> 0</p>
+             <span >time used</span>
+         </div>
+    
+            </div>
+        </div>
+   
+    </div>
+    <div class="overlayGame">
+        <span class="loader"></span>
+       </div>
+    
+</div>
+
+
+
+
+
+
+
+
+    
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/advanced.js"></script>
+</body>
